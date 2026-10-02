@@ -25,11 +25,14 @@ This repository hosts an autonomous, data-driven pipeline for evaluating the **k
 
 The workflow runs an **active learning loop** that:
 
-- 🧠 trains a Machine Learning Interatomic Potential (**MACE**) to DFT-level accuracy,
+- 🧠 trains a Machine Learning Interatomic Potential (**MACE**) on DFT reference data,
 - 🚏 automates **CI-NEB** (climbing-image Nudged Elastic Band) calculations,
 - 📈 extracts **Brønsted–Evans–Polanyi (BEP)** scaling relations,
 
 all without manual intervention.
+
+> [!NOTE]
+> **Scope of this repository.** This is a lightweight, laptop-scale demonstration of the *automated workflow and its mechanism* (active-learning loop, uncertainty-driven decisions, CI-NEB automation, BEP analysis). Calculation settings are deliberately inexpensive, so the numerical values shown below illustrate the method and are not converged production results. All settings are adjustable in [`config.yaml`](config.yaml) for higher-precision runs.
 
 > 📄 **This work is referenced to the following publication:**
 > S. Ziat, F. Brix, A. Tsaturyan, B. Kierren, É. Gaudry, *"How N-Doping Promotes Hydrogen Dissociation at Graphene-Based Single-Atom Catalysts"*, **J. Phys. Chem. Lett.**, 2026. [doi:10.1021/acs.jpclett.5c03805](https://doi.org/10.1021/acs.jpclett.5c03805)
@@ -93,7 +96,7 @@ graph LR
 
 ## 📊 Key Results
 
-The automated workflow extracted the kinetic barriers for heterolytic and homolytic H₂ dissociation across several Pd coordination motifs. Nitrogen-rich motifs show clearly lower barriers than the all-carbon Pd–C₃ site.
+As a demonstration, the automated workflow extracted the kinetic barriers for heterolytic and homolytic H₂ dissociation across several Pd coordination motifs. In this run, nitrogen-rich motifs show lower barriers than the all-carbon Pd–C₃ site.
 
 | Motif | Activation barrier *E<sub>a</sub>* (eV) | Reaction energy *ΔE* (eV) |
 | :--- | :---: | :---: |
@@ -140,6 +143,14 @@ Parity plots of MACE against DFT reference data.
     <td align="center"><b>Total energy parity</b><br><img src="figures/mace_total_energy_parity-1.png" width="380"></td>
   </tr>
 </table>
+
+### 4. Training convergence
+
+Loss, energy/force RMSE and parity plots from a MACE training run (checkpoint loaded from epoch 59). Training was kept short on purpose to demonstrate the loop on a laptop; longer training and larger datasets improve accuracy.
+
+<p align="center">
+  <img src="results/mace_multitm_model_run-123_train_Default_stage_one.png" alt="MACE training convergence: loss, RMSE and parity plots" width="800">
+</p>
 
 ---
 
@@ -190,6 +201,7 @@ Hyperparameters and tolerances (e.g. uncertainty thresholds for the active learn
 ├── checkpoints/              # Saved model weights during MACE training
 ├── figures/                  # Generated plots (parity, BEP scaling, energy profiles)
 ├── gpaw_logs/                # Outputs from DFT reference calculations
+├── results/                  # MACE training diagnostics (loss, RMSE, parity)
 ├── structures_neb/           # Initial and final state .xyz/.traj geometries
 ├── project2_workflow.py      # Jobflow orchestration and node definitions
 ├── run_workflow.py           # Main execution entry point for the active learning loop
