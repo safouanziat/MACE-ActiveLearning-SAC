@@ -132,8 +132,8 @@ Parity plots of MACE against DFT reference data.
 
 <table align="center">
   <tr>
-    <td align="center"><b>Adsorption energy parity</b><br><img src="figures/mace_adsorption_parity.png" width="380"></td>
-    <td align="center"><b>Total energy parity</b><br><img src="figures/mace_total_energy_parity.png" width="380"></td>
+    <td align="center"><b>Adsorption energy parity</b><br><img src="figures/mace_adsorption_parity-1.png" width="380"></td>
+    <td align="center"><b>Total energy parity</b><br><img src="figures/mace_total_energy_parity-1.png" width="380"></td>
   </tr>
 </table>
 
