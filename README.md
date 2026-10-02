@@ -11,8 +11,9 @@ H₂ dissociation on nitrogen-doped graphene-supported palladium (Pd–C<sub>3�
 ![ASE](https://img.shields.io/badge/ASE-enabled-0366d6)
 ![Jobflow](https://img.shields.io/badge/orchestration-jobflow-28a745)
 ![MongoDB](https://img.shields.io/badge/storage-MongoDB%20Atlas-47A248?logo=mongodb&logoColor=white)
+[![Paper](https://img.shields.io/badge/paper-J.%20Phys.%20Chem.%20Lett.%202026-orange)](https://doi.org/10.1021/acs.jpclett.5c03805)
 
-[Overview](#-overview) · [Pipeline](#-pipeline-architecture) · [Results](#-key-results) · [Quick start](#-quick-start) · [Structure](#-repository-structure)
+[Overview](#-overview) · [Pipeline](#-pipeline-architecture) · [Results](#-key-results) · [Quick start](#-quick-start) · [Structure](#-repository-structure) · [Publication](#-related-publication--citation)
 
 </div>
 
@@ -29,6 +30,9 @@ The workflow runs an **active learning loop** that:
 - 📈 extracts **Brønsted–Evans–Polanyi (BEP)** scaling relations,
 
 all without manual intervention.
+
+> 📄 **This work is referenced to the following publication:**
+> S. Ziat, F. Brix, A. Tsaturyan, B. Kierren, É. Gaudry, *"How N-Doping Promotes Hydrogen Dissociation at Graphene-Based Single-Atom Catalysts"*, **J. Phys. Chem. Lett.**, 2026. [doi:10.1021/acs.jpclett.5c03805](https://doi.org/10.1021/acs.jpclett.5c03805)
 
 ---
 
@@ -192,6 +196,39 @@ Hyperparameters and tolerances (e.g. uncertainty thresholds for the active learn
 ├── sync_atlas.py             # MongoDB Atlas synchronization script
 ├── sync_catalysis_db.py      # Local database management script
 └── config.yaml               # Pipeline hyperparameters and tolerances
+```
+
+---
+
+## 📚 Related Publication & Citation
+
+This repository is associated with the study of H₂ dissociation on N-doped graphene-supported single-atom catalysts reported in:
+
+> **S. Ziat**, F. Brix, A. Tsaturyan, B. Kierren, É. Gaudry,
+> *How N-Doping Promotes Hydrogen Dissociation at Graphene-Based Single-Atom Catalysts*,
+> **J. Phys. Chem. Lett.**, 2026. [doi:10.1021/acs.jpclett.5c03805](https://doi.org/10.1021/acs.jpclett.5c03805)
+
+If you use this pipeline or its results, please cite the paper:
+
+```bibtex
+@article{ziat2026ndoping,
+  author  = {Ziat, Safouan and Brix, F. and Tsaturyan, A. and Kierren, B. and Gaudry, {\'E}.},
+  title   = {How N-Doping Promotes Hydrogen Dissociation at Graphene-Based Single-Atom Catalysts},
+  journal = {The Journal of Physical Chemistry Letters},
+  year    = {2026},
+  doi     = {10.1021/acs.jpclett.5c03805}
+}
+```
+
+and, if relevant, the repository itself:
+
+```bibtex
+@software{ziat2026mace_activelearning_sac,
+  author = {Ziat, Safouan},
+  title  = {MACE-ActiveLearning-SAC: Autonomous Active Learning of MLIPs for Single-Atom Catalysis},
+  url    = {https://github.com/safouanziat/MACE-ActiveLearning-SAC},
+  year   = {2026}
+}
 ```
 
 ---
