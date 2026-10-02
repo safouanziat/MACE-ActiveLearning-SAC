@@ -184,14 +184,13 @@ Hyperparameters and tolerances (e.g. uncertainty thresholds for the active learn
 ```text
 .
 ├── checkpoints/              # Saved model weights during MACE training
-├── figures/                  # Plots (parity, BEP scaling, energy profiles)
+├── figures/                  # Generated plots (parity, BEP scaling, energy profiles)
 ├── gpaw_logs/                # Outputs from DFT reference calculations
 ├── structures_neb/           # Initial and final state .xyz/.traj geometries
-├── 01_relax_support.py       # Support generation (150 Å vacuum, fixed boundaries)
 ├── project2_workflow.py      # Jobflow orchestration and node definitions
-├── run_workflow.py           # Main entry point for the active learning loop
-├── sync_atlas.py             # MongoDB Atlas synchronization
-├── sync_catalysis_db.py      # Local database management
+├── run_workflow.py           # Main execution entry point for the active learning loop
+├── sync_atlas.py             # MongoDB Atlas synchronization script
+├── sync_catalysis_db.py      # Local database management script
 └── config.yaml               # Pipeline hyperparameters and tolerances
 ```
 
