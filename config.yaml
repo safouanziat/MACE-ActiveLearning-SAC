@@ -1,0 +1,70 @@
+stages:
+  synthesize_substrate: false
+  generate_motifs: false
+  static_dft: true
+  train_mace: true
+  cineb_screening: true
+  generate_figures: true
+
+system:
+  metals: ["Pd"]
+  coordination_element: "N"
+  cell_size: [5, 5]
+  vacuum: 10.0
+  db_path: "catalysis.db"
+  export_train_xyz: "mace_train.xyz"
+  export_val_xyz: "mace_val.xyz"
+  train_ratio: 0.85
+  executor: "local"
+
+adsorbate:
+  type: "H2"
+  eq_bond_length: 0.74
+  approach_z_heights: [1.4, 1.8, 2.2, 2.6, 3.2, 4.0]
+  cleavage_z_heights: [1.8, 2.2]
+  bond_stretch_distances: [0.85, 1.10, 1.40, 1.80, 2.30]
+
+dft:
+  xc: "PBE"
+  use_d3: true
+  spinpol: true
+  hubbard_u: 0.0
+  pw_cutoff: 500.0
+  kpts: [1, 1, 1]
+  convergence:
+    energy: 1.0e-5
+    density: 1.0e-4
+
+mace_mlip:
+  model_name: "mace_multitm_model"
+  foundation_model: "small"
+  batch_size: 4
+  max_epochs: 60
+  device: "cpu"
+
+kinetics_and_thermo:
+  neb_climbing: true
+  neb_images: 5
+  neb_fmax: 0.05
+  temperature_k: 298.15
+  pressure_bar: 1.0
+  discovery_samples: 30
+
+sampling:
+  mode: "systematic"
+  max_atoms: 100
+  dispersion_radius: 2.5
+  rattle:
+    enabled: false
+    amplitudes: [0.05, 0.1]
+    replicates_per_amp: 2
+
+thermal_sampling:
+  temperature_K: 500
+  md_steps: 3
+  save_every: 1
+
+active_learning:
+  max_ea: 1.20
+  min_ea: -0.05
+  force_tol: 0.10

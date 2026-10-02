@@ -1,0 +1,53 @@
+&GLOBAL
+  PROJECT gers_graphene
+  RUN_TYPE GEO_OPT
+  PRINT_LEVEL LOW
+&END GLOBAL
+
+&FORCE_EVAL
+  METHOD FIST
+  &MM
+    &FORCEFIELD
+      &CHARGE
+        ATOM C
+        CHARGE 0.0
+      &END CHARGE
+      
+      &NONBONDED
+        &LENNARD-JONES
+          ATOMS C C
+          EPSILON 0.0
+          SIGMA 1.0
+          RCUT 10.0
+        &END LENNARD-JONES
+        
+        &TERSOFF
+          ATOMS C C C
+          PARM_FILE_NAME tersoff.pot
+        &END TERSOFF
+      &END NONBONDED
+    &END FORCEFIELD
+    &POISSON
+      &EWALD
+        EWALD_TYPE NONE
+      &END EWALD
+    &END POISSON
+  &END MM
+  &SUBSYS
+    &CELL
+      ABC 24.6 24.6 20.0 
+      ALPHA_BETA_GAMMA 90.0 90.0 120.0
+    &END CELL
+    &TOPOLOGY
+      COORD_FILE_NAME graphene_supercell.xyz
+      COORD_FILE_FORMAT XYZ
+    &END TOPOLOGY
+  &END SUBSYS
+&END FORCE_EVAL
+
+&MOTION
+  &GEO_OPT
+    MAX_ITER 500
+    OPTIMIZER BFGS
+  &END GEO_OPT
+&END MOTION

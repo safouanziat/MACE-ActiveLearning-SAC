@@ -1,0 +1,349 @@
+[Jobflow] Lancement de l'orchestrateur avec boucle Active Learning...
+2026-10-02 17:43:22,194 INFO Started executing jobs locally
+2026-10-02 17:43:22,199 INFO Starting job - run_dft_reference_job (0112077a-9c31-44d8-afc4-9ca0025a7a72)
+✅ [Smart Resume] Données AIMD déjà présentes pour Pd-N3. Saut du calcul DFT lourd.
+2026-10-02 17:43:22,212 INFO Finished job - run_dft_reference_job (0112077a-9c31-44d8-afc4-9ca0025a7a72)
+2026-10-02 17:43:22,212 INFO Starting job - train_mace_mlip_job (5f54a00f-007d-4268-8893-4a655c198917)
+Dataset exporté : 234 train, 42 val. Lancement de l'entraînement MACE...
+2026-10-02 18:56:25,357 INFO Finished job - train_mace_mlip_job (5f54a00f-007d-4268-8893-4a655c198917)
+2026-10-02 18:56:25,378 INFO Starting job - evaluate_mace_model_job (849a0963-6303-452e-adfe-147160a9c9d8)
+/home/ziat1/miniconda3/envs/sac_multitm_env/lib/python3.10/site-packages/e3nn/o3/_wigner.py:10: UserWarning: Environment variable TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD detected, since the`weights_only` argument was not explicitly passed to `torch.load`, forcing weights_only=False.
+  _Jd, _W3j_flat, _W3j_indices = torch.load(os.path.join(os.path.dirname(__file__), 'constants.pt'))
+/home/ziat1/miniconda3/envs/sac_multitm_env/lib/python3.10/site-packages/torch/jit/_script.py:1491: FutureWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.
+  warnings.warn(
+/home/ziat1/miniconda3/envs/sac_multitm_env/lib/python3.10/site-packages/torch/jit/_script.py:1491: FutureWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.
+  warnings.warn(
+/home/ziat1/miniconda3/envs/sac_multitm_env/lib/python3.10/site-packages/mace/calculators/mace.py:226: UserWarning: Environment variable TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD detected, since the`weights_only` argument was not explicitly passed to `torch.load`, forcing weights_only=False.
+  torch.load(f=model_path, map_location=device)
+/home/ziat1/miniconda3/envs/sac_multitm_env/lib/python3.10/site-packages/torch/jit/_serialization.py:176: FutureWarning: `torch.jit.load` is deprecated. Please switch to `torch.export`.
+  warnings.warn(
+/home/ziat1/miniconda3/envs/sac_multitm_env/lib/python3.10/site-packages/torch/jit/_serialization.py:176: FutureWarning: `torch.jit.load` is deprecated. Please switch to `torch.export`.
+  warnings.warn(
+/home/ziat1/miniconda3/envs/sac_multitm_env/lib/python3.10/site-packages/torch/jit/_serialization.py:176: FutureWarning: `torch.jit.load` is deprecated. Please switch to `torch.export`.
+  warnings.warn(
+WARNING:root:No dtype selected, switching to float32 to match model dtype.
+cuequivariance or cuequivariance_torch is not available. Cuequivariance acceleration will be disabled.
+
+--- Évaluation de la précision chimique (ΔE ads) ---
+MAE sur les énergies d'adsorption : 0.1861 eV
+2026-10-02 18:56:39,299 INFO Finished job - evaluate_mace_model_job (849a0963-6303-452e-adfe-147160a9c9d8)
+INFO:jobflow.core.job:Finished job - evaluate_mace_model_job (849a0963-6303-452e-adfe-147160a9c9d8)
+2026-10-02 18:56:39,300 INFO Starting job - run_mlip_cineb_job (5765146e-0763-4e98-a429-21c36990d72e)
+INFO:jobflow.core.job:Starting job - run_mlip_cineb_job (5765146e-0763-4e98-a429-21c36990d72e)
+/home/ziat1/miniconda3/envs/sac_multitm_env/lib/python3.10/site-packages/mace/calculators/mace.py:226: UserWarning: Environment variable TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD detected, since the`weights_only` argument was not explicitly passed to `torch.load`, forcing weights_only=False.
+  torch.load(f=model_path, map_location=device)
+/home/ziat1/miniconda3/envs/sac_multitm_env/lib/python3.10/site-packages/torch/jit/_serialization.py:176: FutureWarning: `torch.jit.load` is deprecated. Please switch to `torch.export`.
+  warnings.warn(
+/home/ziat1/miniconda3/envs/sac_multitm_env/lib/python3.10/site-packages/torch/jit/_serialization.py:176: FutureWarning: `torch.jit.load` is deprecated. Please switch to `torch.export`.
+  warnings.warn(
+/home/ziat1/miniconda3/envs/sac_multitm_env/lib/python3.10/site-packages/torch/jit/_serialization.py:176: FutureWarning: `torch.jit.load` is deprecated. Please switch to `torch.export`.
+  warnings.warn(
+WARNING:root:No dtype selected, switching to float32 to match model dtype.
+/home/ziat1/miniconda3/envs/sac_multitm_env/lib/python3.10/site-packages/mace/calculators/mace.py:226: UserWarning: Environment variable TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD detected, since the`weights_only` argument was not explicitly passed to `torch.load`, forcing weights_only=False.
+  torch.load(f=model_path, map_location=device)
+/home/ziat1/miniconda3/envs/sac_multitm_env/lib/python3.10/site-packages/torch/jit/_serialization.py:176: FutureWarning: `torch.jit.load` is deprecated. Please switch to `torch.export`.
+  warnings.warn(
+/home/ziat1/miniconda3/envs/sac_multitm_env/lib/python3.10/site-packages/torch/jit/_serialization.py:176: FutureWarning: `torch.jit.load` is deprecated. Please switch to `torch.export`.
+  warnings.warn(
+WARNING:root:No dtype selected, switching to float32 to match model dtype.
+/home/ziat1/miniconda3/envs/sac_multitm_env/lib/python3.10/site-packages/mace/calculators/mace.py:226: UserWarning: Environment variable TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD detected, since the`weights_only` argument was not explicitly passed to `torch.load`, forcing weights_only=False.
+  torch.load(f=model_path, map_location=device)
+/home/ziat1/miniconda3/envs/sac_multitm_env/lib/python3.10/site-packages/torch/jit/_serialization.py:176: FutureWarning: `torch.jit.load` is deprecated. Please switch to `torch.export`.
+  warnings.warn(
+/home/ziat1/miniconda3/envs/sac_multitm_env/lib/python3.10/site-packages/torch/jit/_serialization.py:176: FutureWarning: `torch.jit.load` is deprecated. Please switch to `torch.export`.
+  warnings.warn(
+WARNING:root:No dtype selected, switching to float32 to match model dtype.
+/home/ziat1/miniconda3/envs/sac_multitm_env/lib/python3.10/site-packages/mace/calculators/mace.py:226: UserWarning: Environment variable TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD detected, since the`weights_only` argument was not explicitly passed to `torch.load`, forcing weights_only=False.
+  torch.load(f=model_path, map_location=device)
+/home/ziat1/miniconda3/envs/sac_multitm_env/lib/python3.10/site-packages/torch/jit/_serialization.py:176: FutureWarning: `torch.jit.load` is deprecated. Please switch to `torch.export`.
+  warnings.warn(
+/home/ziat1/miniconda3/envs/sac_multitm_env/lib/python3.10/site-packages/torch/jit/_serialization.py:176: FutureWarning: `torch.jit.load` is deprecated. Please switch to `torch.export`.
+  warnings.warn(
+WARNING:root:No dtype selected, switching to float32 to match model dtype.
+/home/ziat1/miniconda3/envs/sac_multitm_env/lib/python3.10/site-packages/mace/calculators/mace.py:226: UserWarning: Environment variable TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD detected, since the`weights_only` argument was not explicitly passed to `torch.load`, forcing weights_only=False.
+  torch.load(f=model_path, map_location=device)
+/home/ziat1/miniconda3/envs/sac_multitm_env/lib/python3.10/site-packages/torch/jit/_serialization.py:176: FutureWarning: `torch.jit.load` is deprecated. Please switch to `torch.export`.
+  warnings.warn(
+/home/ziat1/miniconda3/envs/sac_multitm_env/lib/python3.10/site-packages/torch/jit/_serialization.py:176: FutureWarning: `torch.jit.load` is deprecated. Please switch to `torch.export`.
+  warnings.warn(
+WARNING:root:No dtype selected, switching to float32 to match model dtype.
+/home/ziat1/miniconda3/envs/sac_multitm_env/lib/python3.10/site-packages/mace/calculators/mace.py:226: UserWarning: Environment variable TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD detected, since the`weights_only` argument was not explicitly passed to `torch.load`, forcing weights_only=False.
+  torch.load(f=model_path, map_location=device)
+/home/ziat1/miniconda3/envs/sac_multitm_env/lib/python3.10/site-packages/torch/jit/_serialization.py:176: FutureWarning: `torch.jit.load` is deprecated. Please switch to `torch.export`.
+  warnings.warn(
+/home/ziat1/miniconda3/envs/sac_multitm_env/lib/python3.10/site-packages/torch/jit/_serialization.py:176: FutureWarning: `torch.jit.load` is deprecated. Please switch to `torch.export`.
+  warnings.warn(
+WARNING:root:No dtype selected, switching to float32 to match model dtype.
+/home/ziat1/miniconda3/envs/sac_multitm_env/lib/python3.10/site-packages/mace/calculators/mace.py:226: UserWarning: Environment variable TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD detected, since the`weights_only` argument was not explicitly passed to `torch.load`, forcing weights_only=False.
+  torch.load(f=model_path, map_location=device)
+/home/ziat1/miniconda3/envs/sac_multitm_env/lib/python3.10/site-packages/torch/jit/_serialization.py:176: FutureWarning: `torch.jit.load` is deprecated. Please switch to `torch.export`.
+  warnings.warn(
+/home/ziat1/miniconda3/envs/sac_multitm_env/lib/python3.10/site-packages/torch/jit/_serialization.py:176: FutureWarning: `torch.jit.load` is deprecated. Please switch to `torch.export`.
+  warnings.warn(
+WARNING:root:No dtype selected, switching to float32 to match model dtype.
+/home/ziat1/miniconda3/envs/sac_multitm_env/lib/python3.10/site-packages/mace/calculators/mace.py:226: UserWarning: Environment variable TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD detected, since the`weights_only` argument was not explicitly passed to `torch.load`, forcing weights_only=False.
+  torch.load(f=model_path, map_location=device)
+/home/ziat1/miniconda3/envs/sac_multitm_env/lib/python3.10/site-packages/torch/jit/_serialization.py:176: FutureWarning: `torch.jit.load` is deprecated. Please switch to `torch.export`.
+  warnings.warn(
+/home/ziat1/miniconda3/envs/sac_multitm_env/lib/python3.10/site-packages/torch/jit/_serialization.py:176: FutureWarning: `torch.jit.load` is deprecated. Please switch to `torch.export`.
+  warnings.warn(
+WARNING:root:No dtype selected, switching to float32 to match model dtype.
+/home/ziat1/miniconda3/envs/sac_multitm_env/lib/python3.10/site-packages/mace/calculators/mace.py:226: UserWarning: Environment variable TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD detected, since the`weights_only` argument was not explicitly passed to `torch.load`, forcing weights_only=False.
+  torch.load(f=model_path, map_location=device)
+/home/ziat1/miniconda3/envs/sac_multitm_env/lib/python3.10/site-packages/torch/jit/_serialization.py:176: FutureWarning: `torch.jit.load` is deprecated. Please switch to `torch.export`.
+  warnings.warn(
+/home/ziat1/miniconda3/envs/sac_multitm_env/lib/python3.10/site-packages/torch/jit/_serialization.py:176: FutureWarning: `torch.jit.load` is deprecated. Please switch to `torch.export`.
+  warnings.warn(
+WARNING:root:No dtype selected, switching to float32 to match model dtype.
+/home/ziat1/miniconda3/envs/sac_multitm_env/lib/python3.10/site-packages/ase/mep/neb.py:329: UserWarning: The default method has changed from 'aseneb' to 'improvedtangent'. The 'aseneb' method is an unpublished, custom implementation that is not recommended as it frequently results in very poor bands. Please explicitly set method='improvedtangent' to silence this warning, or set method='aseneb' if you strictly require the old behavior (results may vary). See: https://gitlab.com/ase/ase/-/merge_requests/3952
+  warnings.warn(
+  -> Running MACE CI-NEB on Pd-N3...
+2026-10-02 19:10:26,674 INFO Finished job - run_mlip_cineb_job (5765146e-0763-4e98-a429-21c36990d72e)
+INFO:jobflow.core.job:Finished job - run_mlip_cineb_job (5765146e-0763-4e98-a429-21c36990d72e)
+2026-10-02 19:10:26,674 INFO Starting job - run_mlip_cineb_job (e8fe3d0f-07c9-4114-af39-ff44d083ad33)
+INFO:jobflow.core.job:Starting job - run_mlip_cineb_job (e8fe3d0f-07c9-4114-af39-ff44d083ad33)
+/home/ziat1/miniconda3/envs/sac_multitm_env/lib/python3.10/site-packages/mace/calculators/mace.py:226: UserWarning: Environment variable TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD detected, since the`weights_only` argument was not explicitly passed to `torch.load`, forcing weights_only=False.
+  torch.load(f=model_path, map_location=device)
+/home/ziat1/miniconda3/envs/sac_multitm_env/lib/python3.10/site-packages/torch/jit/_serialization.py:176: FutureWarning: `torch.jit.load` is deprecated. Please switch to `torch.export`.
+  warnings.warn(
+/home/ziat1/miniconda3/envs/sac_multitm_env/lib/python3.10/site-packages/torch/jit/_serialization.py:176: FutureWarning: `torch.jit.load` is deprecated. Please switch to `torch.export`.
+  warnings.warn(
+WARNING:root:No dtype selected, switching to float32 to match model dtype.
+/home/ziat1/miniconda3/envs/sac_multitm_env/lib/python3.10/site-packages/mace/calculators/mace.py:226: UserWarning: Environment variable TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD detected, since the`weights_only` argument was not explicitly passed to `torch.load`, forcing weights_only=False.
+  torch.load(f=model_path, map_location=device)
+/home/ziat1/miniconda3/envs/sac_multitm_env/lib/python3.10/site-packages/torch/jit/_serialization.py:176: FutureWarning: `torch.jit.load` is deprecated. Please switch to `torch.export`.
+  warnings.warn(
+/home/ziat1/miniconda3/envs/sac_multitm_env/lib/python3.10/site-packages/torch/jit/_serialization.py:176: FutureWarning: `torch.jit.load` is deprecated. Please switch to `torch.export`.
+  warnings.warn(
+WARNING:root:No dtype selected, switching to float32 to match model dtype.
+/home/ziat1/miniconda3/envs/sac_multitm_env/lib/python3.10/site-packages/mace/calculators/mace.py:226: UserWarning: Environment variable TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD detected, since the`weights_only` argument was not explicitly passed to `torch.load`, forcing weights_only=False.
+  torch.load(f=model_path, map_location=device)
+/home/ziat1/miniconda3/envs/sac_multitm_env/lib/python3.10/site-packages/torch/jit/_serialization.py:176: FutureWarning: `torch.jit.load` is deprecated. Please switch to `torch.export`.
+  warnings.warn(
+/home/ziat1/miniconda3/envs/sac_multitm_env/lib/python3.10/site-packages/torch/jit/_serialization.py:176: FutureWarning: `torch.jit.load` is deprecated. Please switch to `torch.export`.
+  warnings.warn(
+WARNING:root:No dtype selected, switching to float32 to match model dtype.
+/home/ziat1/miniconda3/envs/sac_multitm_env/lib/python3.10/site-packages/mace/calculators/mace.py:226: UserWarning: Environment variable TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD detected, since the`weights_only` argument was not explicitly passed to `torch.load`, forcing weights_only=False.
+  torch.load(f=model_path, map_location=device)
+/home/ziat1/miniconda3/envs/sac_multitm_env/lib/python3.10/site-packages/torch/jit/_serialization.py:176: FutureWarning: `torch.jit.load` is deprecated. Please switch to `torch.export`.
+  warnings.warn(
+/home/ziat1/miniconda3/envs/sac_multitm_env/lib/python3.10/site-packages/torch/jit/_serialization.py:176: FutureWarning: `torch.jit.load` is deprecated. Please switch to `torch.export`.
+  warnings.warn(
+WARNING:root:No dtype selected, switching to float32 to match model dtype.
+/home/ziat1/miniconda3/envs/sac_multitm_env/lib/python3.10/site-packages/mace/calculators/mace.py:226: UserWarning: Environment variable TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD detected, since the`weights_only` argument was not explicitly passed to `torch.load`, forcing weights_only=False.
+  torch.load(f=model_path, map_location=device)
+/home/ziat1/miniconda3/envs/sac_multitm_env/lib/python3.10/site-packages/torch/jit/_serialization.py:176: FutureWarning: `torch.jit.load` is deprecated. Please switch to `torch.export`.
+  warnings.warn(
+/home/ziat1/miniconda3/envs/sac_multitm_env/lib/python3.10/site-packages/torch/jit/_serialization.py:176: FutureWarning: `torch.jit.load` is deprecated. Please switch to `torch.export`.
+  warnings.warn(
+WARNING:root:No dtype selected, switching to float32 to match model dtype.
+/home/ziat1/miniconda3/envs/sac_multitm_env/lib/python3.10/site-packages/mace/calculators/mace.py:226: UserWarning: Environment variable TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD detected, since the`weights_only` argument was not explicitly passed to `torch.load`, forcing weights_only=False.
+  torch.load(f=model_path, map_location=device)
+/home/ziat1/miniconda3/envs/sac_multitm_env/lib/python3.10/site-packages/torch/jit/_serialization.py:176: FutureWarning: `torch.jit.load` is deprecated. Please switch to `torch.export`.
+  warnings.warn(
+/home/ziat1/miniconda3/envs/sac_multitm_env/lib/python3.10/site-packages/torch/jit/_serialization.py:176: FutureWarning: `torch.jit.load` is deprecated. Please switch to `torch.export`.
+  warnings.warn(
+WARNING:root:No dtype selected, switching to float32 to match model dtype.
+/home/ziat1/miniconda3/envs/sac_multitm_env/lib/python3.10/site-packages/mace/calculators/mace.py:226: UserWarning: Environment variable TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD detected, since the`weights_only` argument was not explicitly passed to `torch.load`, forcing weights_only=False.
+  torch.load(f=model_path, map_location=device)
+/home/ziat1/miniconda3/envs/sac_multitm_env/lib/python3.10/site-packages/torch/jit/_serialization.py:176: FutureWarning: `torch.jit.load` is deprecated. Please switch to `torch.export`.
+  warnings.warn(
+/home/ziat1/miniconda3/envs/sac_multitm_env/lib/python3.10/site-packages/torch/jit/_serialization.py:176: FutureWarning: `torch.jit.load` is deprecated. Please switch to `torch.export`.
+  warnings.warn(
+WARNING:root:No dtype selected, switching to float32 to match model dtype.
+/home/ziat1/miniconda3/envs/sac_multitm_env/lib/python3.10/site-packages/mace/calculators/mace.py:226: UserWarning: Environment variable TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD detected, since the`weights_only` argument was not explicitly passed to `torch.load`, forcing weights_only=False.
+  torch.load(f=model_path, map_location=device)
+/home/ziat1/miniconda3/envs/sac_multitm_env/lib/python3.10/site-packages/torch/jit/_serialization.py:176: FutureWarning: `torch.jit.load` is deprecated. Please switch to `torch.export`.
+  warnings.warn(
+/home/ziat1/miniconda3/envs/sac_multitm_env/lib/python3.10/site-packages/torch/jit/_serialization.py:176: FutureWarning: `torch.jit.load` is deprecated. Please switch to `torch.export`.
+  warnings.warn(
+WARNING:root:No dtype selected, switching to float32 to match model dtype.
+/home/ziat1/miniconda3/envs/sac_multitm_env/lib/python3.10/site-packages/mace/calculators/mace.py:226: UserWarning: Environment variable TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD detected, since the`weights_only` argument was not explicitly passed to `torch.load`, forcing weights_only=False.
+  torch.load(f=model_path, map_location=device)
+/home/ziat1/miniconda3/envs/sac_multitm_env/lib/python3.10/site-packages/torch/jit/_serialization.py:176: FutureWarning: `torch.jit.load` is deprecated. Please switch to `torch.export`.
+  warnings.warn(
+/home/ziat1/miniconda3/envs/sac_multitm_env/lib/python3.10/site-packages/torch/jit/_serialization.py:176: FutureWarning: `torch.jit.load` is deprecated. Please switch to `torch.export`.
+  warnings.warn(
+WARNING:root:No dtype selected, switching to float32 to match model dtype.
+/home/ziat1/miniconda3/envs/sac_multitm_env/lib/python3.10/site-packages/ase/mep/neb.py:329: UserWarning: The default method has changed from 'aseneb' to 'improvedtangent'. The 'aseneb' method is an unpublished, custom implementation that is not recommended as it frequently results in very poor bands. Please explicitly set method='improvedtangent' to silence this warning, or set method='aseneb' if you strictly require the old behavior (results may vary). See: https://gitlab.com/ase/ase/-/merge_requests/3952
+  warnings.warn(
+  -> Running MACE CI-NEB on Pd-N2C1...
+2026-10-02 19:25:26,426 INFO Finished job - run_mlip_cineb_job (e8fe3d0f-07c9-4114-af39-ff44d083ad33)
+INFO:jobflow.core.job:Finished job - run_mlip_cineb_job (e8fe3d0f-07c9-4114-af39-ff44d083ad33)
+2026-10-02 19:25:26,427 INFO Starting job - run_mlip_cineb_job (9f13a472-87f8-469d-8e15-3f3941563477)
+INFO:jobflow.core.job:Starting job - run_mlip_cineb_job (9f13a472-87f8-469d-8e15-3f3941563477)
+/home/ziat1/miniconda3/envs/sac_multitm_env/lib/python3.10/site-packages/mace/calculators/mace.py:226: UserWarning: Environment variable TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD detected, since the`weights_only` argument was not explicitly passed to `torch.load`, forcing weights_only=False.
+  torch.load(f=model_path, map_location=device)
+/home/ziat1/miniconda3/envs/sac_multitm_env/lib/python3.10/site-packages/torch/jit/_serialization.py:176: FutureWarning: `torch.jit.load` is deprecated. Please switch to `torch.export`.
+  warnings.warn(
+/home/ziat1/miniconda3/envs/sac_multitm_env/lib/python3.10/site-packages/torch/jit/_serialization.py:176: FutureWarning: `torch.jit.load` is deprecated. Please switch to `torch.export`.
+  warnings.warn(
+WARNING:root:No dtype selected, switching to float32 to match model dtype.
+/home/ziat1/miniconda3/envs/sac_multitm_env/lib/python3.10/site-packages/mace/calculators/mace.py:226: UserWarning: Environment variable TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD detected, since the`weights_only` argument was not explicitly passed to `torch.load`, forcing weights_only=False.
+  torch.load(f=model_path, map_location=device)
+/home/ziat1/miniconda3/envs/sac_multitm_env/lib/python3.10/site-packages/torch/jit/_serialization.py:176: FutureWarning: `torch.jit.load` is deprecated. Please switch to `torch.export`.
+  warnings.warn(
+/home/ziat1/miniconda3/envs/sac_multitm_env/lib/python3.10/site-packages/torch/jit/_serialization.py:176: FutureWarning: `torch.jit.load` is deprecated. Please switch to `torch.export`.
+  warnings.warn(
+WARNING:root:No dtype selected, switching to float32 to match model dtype.
+/home/ziat1/miniconda3/envs/sac_multitm_env/lib/python3.10/site-packages/mace/calculators/mace.py:226: UserWarning: Environment variable TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD detected, since the`weights_only` argument was not explicitly passed to `torch.load`, forcing weights_only=False.
+  torch.load(f=model_path, map_location=device)
+/home/ziat1/miniconda3/envs/sac_multitm_env/lib/python3.10/site-packages/torch/jit/_serialization.py:176: FutureWarning: `torch.jit.load` is deprecated. Please switch to `torch.export`.
+  warnings.warn(
+/home/ziat1/miniconda3/envs/sac_multitm_env/lib/python3.10/site-packages/torch/jit/_serialization.py:176: FutureWarning: `torch.jit.load` is deprecated. Please switch to `torch.export`.
+  warnings.warn(
+WARNING:root:No dtype selected, switching to float32 to match model dtype.
+/home/ziat1/miniconda3/envs/sac_multitm_env/lib/python3.10/site-packages/mace/calculators/mace.py:226: UserWarning: Environment variable TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD detected, since the`weights_only` argument was not explicitly passed to `torch.load`, forcing weights_only=False.
+  torch.load(f=model_path, map_location=device)
+/home/ziat1/miniconda3/envs/sac_multitm_env/lib/python3.10/site-packages/torch/jit/_serialization.py:176: FutureWarning: `torch.jit.load` is deprecated. Please switch to `torch.export`.
+  warnings.warn(
+/home/ziat1/miniconda3/envs/sac_multitm_env/lib/python3.10/site-packages/torch/jit/_serialization.py:176: FutureWarning: `torch.jit.load` is deprecated. Please switch to `torch.export`.
+  warnings.warn(
+WARNING:root:No dtype selected, switching to float32 to match model dtype.
+/home/ziat1/miniconda3/envs/sac_multitm_env/lib/python3.10/site-packages/mace/calculators/mace.py:226: UserWarning: Environment variable TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD detected, since the`weights_only` argument was not explicitly passed to `torch.load`, forcing weights_only=False.
+  torch.load(f=model_path, map_location=device)
+/home/ziat1/miniconda3/envs/sac_multitm_env/lib/python3.10/site-packages/torch/jit/_serialization.py:176: FutureWarning: `torch.jit.load` is deprecated. Please switch to `torch.export`.
+  warnings.warn(
+/home/ziat1/miniconda3/envs/sac_multitm_env/lib/python3.10/site-packages/torch/jit/_serialization.py:176: FutureWarning: `torch.jit.load` is deprecated. Please switch to `torch.export`.
+  warnings.warn(
+WARNING:root:No dtype selected, switching to float32 to match model dtype.
+/home/ziat1/miniconda3/envs/sac_multitm_env/lib/python3.10/site-packages/mace/calculators/mace.py:226: UserWarning: Environment variable TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD detected, since the`weights_only` argument was not explicitly passed to `torch.load`, forcing weights_only=False.
+  torch.load(f=model_path, map_location=device)
+/home/ziat1/miniconda3/envs/sac_multitm_env/lib/python3.10/site-packages/torch/jit/_serialization.py:176: FutureWarning: `torch.jit.load` is deprecated. Please switch to `torch.export`.
+  warnings.warn(
+/home/ziat1/miniconda3/envs/sac_multitm_env/lib/python3.10/site-packages/torch/jit/_serialization.py:176: FutureWarning: `torch.jit.load` is deprecated. Please switch to `torch.export`.
+  warnings.warn(
+WARNING:root:No dtype selected, switching to float32 to match model dtype.
+/home/ziat1/miniconda3/envs/sac_multitm_env/lib/python3.10/site-packages/mace/calculators/mace.py:226: UserWarning: Environment variable TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD detected, since the`weights_only` argument was not explicitly passed to `torch.load`, forcing weights_only=False.
+  torch.load(f=model_path, map_location=device)
+/home/ziat1/miniconda3/envs/sac_multitm_env/lib/python3.10/site-packages/torch/jit/_serialization.py:176: FutureWarning: `torch.jit.load` is deprecated. Please switch to `torch.export`.
+  warnings.warn(
+/home/ziat1/miniconda3/envs/sac_multitm_env/lib/python3.10/site-packages/torch/jit/_serialization.py:176: FutureWarning: `torch.jit.load` is deprecated. Please switch to `torch.export`.
+  warnings.warn(
+WARNING:root:No dtype selected, switching to float32 to match model dtype.
+/home/ziat1/miniconda3/envs/sac_multitm_env/lib/python3.10/site-packages/mace/calculators/mace.py:226: UserWarning: Environment variable TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD detected, since the`weights_only` argument was not explicitly passed to `torch.load`, forcing weights_only=False.
+  torch.load(f=model_path, map_location=device)
+/home/ziat1/miniconda3/envs/sac_multitm_env/lib/python3.10/site-packages/torch/jit/_serialization.py:176: FutureWarning: `torch.jit.load` is deprecated. Please switch to `torch.export`.
+  warnings.warn(
+/home/ziat1/miniconda3/envs/sac_multitm_env/lib/python3.10/site-packages/torch/jit/_serialization.py:176: FutureWarning: `torch.jit.load` is deprecated. Please switch to `torch.export`.
+  warnings.warn(
+WARNING:root:No dtype selected, switching to float32 to match model dtype.
+/home/ziat1/miniconda3/envs/sac_multitm_env/lib/python3.10/site-packages/mace/calculators/mace.py:226: UserWarning: Environment variable TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD detected, since the`weights_only` argument was not explicitly passed to `torch.load`, forcing weights_only=False.
+  torch.load(f=model_path, map_location=device)
+/home/ziat1/miniconda3/envs/sac_multitm_env/lib/python3.10/site-packages/torch/jit/_serialization.py:176: FutureWarning: `torch.jit.load` is deprecated. Please switch to `torch.export`.
+  warnings.warn(
+/home/ziat1/miniconda3/envs/sac_multitm_env/lib/python3.10/site-packages/torch/jit/_serialization.py:176: FutureWarning: `torch.jit.load` is deprecated. Please switch to `torch.export`.
+  warnings.warn(
+WARNING:root:No dtype selected, switching to float32 to match model dtype.
+/home/ziat1/miniconda3/envs/sac_multitm_env/lib/python3.10/site-packages/ase/mep/neb.py:329: UserWarning: The default method has changed from 'aseneb' to 'improvedtangent'. The 'aseneb' method is an unpublished, custom implementation that is not recommended as it frequently results in very poor bands. Please explicitly set method='improvedtangent' to silence this warning, or set method='aseneb' if you strictly require the old behavior (results may vary). See: https://gitlab.com/ase/ase/-/merge_requests/3952
+  warnings.warn(
+  -> Running MACE CI-NEB on Pd-N1C2...
+2026-10-02 20:08:10,357 INFO Finished job - run_mlip_cineb_job (9f13a472-87f8-469d-8e15-3f3941563477)
+INFO:jobflow.core.job:Finished job - run_mlip_cineb_job (9f13a472-87f8-469d-8e15-3f3941563477)
+2026-10-02 20:08:10,370 INFO Starting job - run_mlip_cineb_job (7f19d1a7-0924-4f43-8b88-af17dfcc57e3)
+INFO:jobflow.core.job:Starting job - run_mlip_cineb_job (7f19d1a7-0924-4f43-8b88-af17dfcc57e3)
+/home/ziat1/miniconda3/envs/sac_multitm_env/lib/python3.10/site-packages/mace/calculators/mace.py:226: UserWarning: Environment variable TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD detected, since the`weights_only` argument was not explicitly passed to `torch.load`, forcing weights_only=False.
+  torch.load(f=model_path, map_location=device)
+/home/ziat1/miniconda3/envs/sac_multitm_env/lib/python3.10/site-packages/torch/jit/_serialization.py:176: FutureWarning: `torch.jit.load` is deprecated. Please switch to `torch.export`.
+  warnings.warn(
+/home/ziat1/miniconda3/envs/sac_multitm_env/lib/python3.10/site-packages/torch/jit/_serialization.py:176: FutureWarning: `torch.jit.load` is deprecated. Please switch to `torch.export`.
+  warnings.warn(
+WARNING:root:No dtype selected, switching to float32 to match model dtype.
+/home/ziat1/miniconda3/envs/sac_multitm_env/lib/python3.10/site-packages/mace/calculators/mace.py:226: UserWarning: Environment variable TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD detected, since the`weights_only` argument was not explicitly passed to `torch.load`, forcing weights_only=False.
+  torch.load(f=model_path, map_location=device)
+/home/ziat1/miniconda3/envs/sac_multitm_env/lib/python3.10/site-packages/torch/jit/_serialization.py:176: FutureWarning: `torch.jit.load` is deprecated. Please switch to `torch.export`.
+  warnings.warn(
+/home/ziat1/miniconda3/envs/sac_multitm_env/lib/python3.10/site-packages/torch/jit/_serialization.py:176: FutureWarning: `torch.jit.load` is deprecated. Please switch to `torch.export`.
+  warnings.warn(
+WARNING:root:No dtype selected, switching to float32 to match model dtype.
+/home/ziat1/miniconda3/envs/sac_multitm_env/lib/python3.10/site-packages/mace/calculators/mace.py:226: UserWarning: Environment variable TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD detected, since the`weights_only` argument was not explicitly passed to `torch.load`, forcing weights_only=False.
+  torch.load(f=model_path, map_location=device)
+/home/ziat1/miniconda3/envs/sac_multitm_env/lib/python3.10/site-packages/torch/jit/_serialization.py:176: FutureWarning: `torch.jit.load` is deprecated. Please switch to `torch.export`.
+  warnings.warn(
+/home/ziat1/miniconda3/envs/sac_multitm_env/lib/python3.10/site-packages/torch/jit/_serialization.py:176: FutureWarning: `torch.jit.load` is deprecated. Please switch to `torch.export`.
+  warnings.warn(
+WARNING:root:No dtype selected, switching to float32 to match model dtype.
+/home/ziat1/miniconda3/envs/sac_multitm_env/lib/python3.10/site-packages/mace/calculators/mace.py:226: UserWarning: Environment variable TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD detected, since the`weights_only` argument was not explicitly passed to `torch.load`, forcing weights_only=False.
+  torch.load(f=model_path, map_location=device)
+/home/ziat1/miniconda3/envs/sac_multitm_env/lib/python3.10/site-packages/torch/jit/_serialization.py:176: FutureWarning: `torch.jit.load` is deprecated. Please switch to `torch.export`.
+  warnings.warn(
+/home/ziat1/miniconda3/envs/sac_multitm_env/lib/python3.10/site-packages/torch/jit/_serialization.py:176: FutureWarning: `torch.jit.load` is deprecated. Please switch to `torch.export`.
+  warnings.warn(
+WARNING:root:No dtype selected, switching to float32 to match model dtype.
+/home/ziat1/miniconda3/envs/sac_multitm_env/lib/python3.10/site-packages/mace/calculators/mace.py:226: UserWarning: Environment variable TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD detected, since the`weights_only` argument was not explicitly passed to `torch.load`, forcing weights_only=False.
+  torch.load(f=model_path, map_location=device)
+/home/ziat1/miniconda3/envs/sac_multitm_env/lib/python3.10/site-packages/torch/jit/_serialization.py:176: FutureWarning: `torch.jit.load` is deprecated. Please switch to `torch.export`.
+  warnings.warn(
+/home/ziat1/miniconda3/envs/sac_multitm_env/lib/python3.10/site-packages/torch/jit/_serialization.py:176: FutureWarning: `torch.jit.load` is deprecated. Please switch to `torch.export`.
+  warnings.warn(
+WARNING:root:No dtype selected, switching to float32 to match model dtype.
+/home/ziat1/miniconda3/envs/sac_multitm_env/lib/python3.10/site-packages/mace/calculators/mace.py:226: UserWarning: Environment variable TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD detected, since the`weights_only` argument was not explicitly passed to `torch.load`, forcing weights_only=False.
+  torch.load(f=model_path, map_location=device)
+/home/ziat1/miniconda3/envs/sac_multitm_env/lib/python3.10/site-packages/torch/jit/_serialization.py:176: FutureWarning: `torch.jit.load` is deprecated. Please switch to `torch.export`.
+  warnings.warn(
+/home/ziat1/miniconda3/envs/sac_multitm_env/lib/python3.10/site-packages/torch/jit/_serialization.py:176: FutureWarning: `torch.jit.load` is deprecated. Please switch to `torch.export`.
+  warnings.warn(
+WARNING:root:No dtype selected, switching to float32 to match model dtype.
+/home/ziat1/miniconda3/envs/sac_multitm_env/lib/python3.10/site-packages/mace/calculators/mace.py:226: UserWarning: Environment variable TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD detected, since the`weights_only` argument was not explicitly passed to `torch.load`, forcing weights_only=False.
+  torch.load(f=model_path, map_location=device)
+/home/ziat1/miniconda3/envs/sac_multitm_env/lib/python3.10/site-packages/torch/jit/_serialization.py:176: FutureWarning: `torch.jit.load` is deprecated. Please switch to `torch.export`.
+  warnings.warn(
+/home/ziat1/miniconda3/envs/sac_multitm_env/lib/python3.10/site-packages/torch/jit/_serialization.py:176: FutureWarning: `torch.jit.load` is deprecated. Please switch to `torch.export`.
+  warnings.warn(
+WARNING:root:No dtype selected, switching to float32 to match model dtype.
+/home/ziat1/miniconda3/envs/sac_multitm_env/lib/python3.10/site-packages/mace/calculators/mace.py:226: UserWarning: Environment variable TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD detected, since the`weights_only` argument was not explicitly passed to `torch.load`, forcing weights_only=False.
+  torch.load(f=model_path, map_location=device)
+/home/ziat1/miniconda3/envs/sac_multitm_env/lib/python3.10/site-packages/torch/jit/_serialization.py:176: FutureWarning: `torch.jit.load` is deprecated. Please switch to `torch.export`.
+  warnings.warn(
+/home/ziat1/miniconda3/envs/sac_multitm_env/lib/python3.10/site-packages/torch/jit/_serialization.py:176: FutureWarning: `torch.jit.load` is deprecated. Please switch to `torch.export`.
+  warnings.warn(
+WARNING:root:No dtype selected, switching to float32 to match model dtype.
+/home/ziat1/miniconda3/envs/sac_multitm_env/lib/python3.10/site-packages/mace/calculators/mace.py:226: UserWarning: Environment variable TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD detected, since the`weights_only` argument was not explicitly passed to `torch.load`, forcing weights_only=False.
+  torch.load(f=model_path, map_location=device)
+/home/ziat1/miniconda3/envs/sac_multitm_env/lib/python3.10/site-packages/torch/jit/_serialization.py:176: FutureWarning: `torch.jit.load` is deprecated. Please switch to `torch.export`.
+  warnings.warn(
+/home/ziat1/miniconda3/envs/sac_multitm_env/lib/python3.10/site-packages/torch/jit/_serialization.py:176: FutureWarning: `torch.jit.load` is deprecated. Please switch to `torch.export`.
+  warnings.warn(
+WARNING:root:No dtype selected, switching to float32 to match model dtype.
+/home/ziat1/miniconda3/envs/sac_multitm_env/lib/python3.10/site-packages/ase/mep/neb.py:329: UserWarning: The default method has changed from 'aseneb' to 'improvedtangent'. The 'aseneb' method is an unpublished, custom implementation that is not recommended as it frequently results in very poor bands. Please explicitly set method='improvedtangent' to silence this warning, or set method='aseneb' if you strictly require the old behavior (results may vary). See: https://gitlab.com/ase/ase/-/merge_requests/3952
+  warnings.warn(
+  -> Running MACE CI-NEB on Pd-C3...
+2026-10-02 20:23:22,812 INFO Finished job - run_mlip_cineb_job (7f19d1a7-0924-4f43-8b88-af17dfcc57e3)
+INFO:jobflow.core.job:Finished job - run_mlip_cineb_job (7f19d1a7-0924-4f43-8b88-af17dfcc57e3)
+2026-10-02 20:23:22,812 INFO Starting job - active_learning_decision_job (d66ff90b-8f93-4654-be88-cb7bddd04fc4)
+INFO:jobflow.core.job:Starting job - active_learning_decision_job (d66ff90b-8f93-4654-be88-cb7bddd04fc4)
+
+--- Évaluation de la robustesse du modèle MLIP ---
+✅ Pd-N2C1 validé par le MLIP (E_act = 0.47 eV)
+✅ Pd-N1C2 validé par le MLIP (E_act = 0.98 eV)
+✅ Pd-C3 validé par le MLIP (E_act = 1.13 eV)
+
+✅ Le modèle MACE est confiant sur tous les motifs. Fin de la boucle Active Learning.
+2026-10-02 20:23:22,817 INFO Finished job - active_learning_decision_job (d66ff90b-8f93-4654-be88-cb7bddd04fc4)
+INFO:jobflow.core.job:Finished job - active_learning_decision_job (d66ff90b-8f93-4654-be88-cb7bddd04fc4)
+2026-10-02 20:23:22,817 INFO Starting job - analyze_bep_scaling_job (a13895a9-f81b-4516-8d95-14d632e75184)
+INFO:jobflow.core.job:Starting job - analyze_bep_scaling_job (a13895a9-f81b-4516-8d95-14d632e75184)
+/home/ziat1/Documents/Training/Autonomous_MultiTM_SAC_Pipeline/project2_workflow.py:233: UserWarning: The figure layout has changed to tight
+  plt.tight_layout()
+/home/ziat1/Documents/Training/Autonomous_MultiTM_SAC_Pipeline/project2_workflow.py:263: UserWarning: The figure layout has changed to tight
+  plt.tight_layout()
+
+=======================================================
+ RÉCAPITULATIF THERMODYNAMIQUE ET CINÉTIQUE (MACE)
+=======================================================
+Motif        | E_act (eV)   | Delta_E (eV)
+-------------------------------------------------------
+Pd-N3        | 0.603        | 0.529       
+Pd-N2C1      | 0.474        | 0.424       
+Pd-N1C2      | 0.982        | 0.609       
+Pd-C3        | 1.134        | 1.005       
+
+ Équation BEP : Ea = 1.08 * dE + 0.10
+ R² obtenu    : 0.779
+=======================================================
+
+2026-10-02 20:23:23,336 INFO Finished job - analyze_bep_scaling_job (a13895a9-f81b-4516-8d95-14d632e75184)
+INFO:jobflow.core.job:Finished job - analyze_bep_scaling_job (a13895a9-f81b-4516-8d95-14d632e75184)
+2026-10-02 20:23:23,336 INFO Finished executing jobs locally
+INFO:jobflow.managers.local:Finished executing jobs locally
+[Jobflow] Exécution terminée avec succès.

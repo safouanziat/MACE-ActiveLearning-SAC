@@ -1,0 +1,211 @@
+/home/ziat1/miniconda3/envs/sac_multitm_env/lib/python3.10/site-packages/e3nn/o3/_wigner.py:10: UserWarning: Environment variable TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD detected, since the`weights_only` argument was not explicitly passed to `torch.load`, forcing weights_only=False.
+  _Jd, _W3j_flat, _W3j_indices = torch.load(os.path.join(os.path.dirname(__file__), 'constants.pt'))
+/home/ziat1/miniconda3/envs/sac_multitm_env/lib/python3.10/site-packages/torch/jit/_script.py:1491: FutureWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.
+  warnings.warn(
+/home/ziat1/miniconda3/envs/sac_multitm_env/lib/python3.10/site-packages/torch/jit/_script.py:1491: FutureWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.
+  warnings.warn(
+cuequivariance or cuequivariance_torch is not available. Cuequivariance acceleration will be disabled.
+2026-10-02 17:43:25.222 INFO: ===========VERIFYING SETTINGS===========
+2026-10-02 17:43:25.222 INFO: MACE version: 0.3.16
+2026-10-02 17:43:25.223 INFO: Using CPU
+2026-10-02 17:43:25.257 INFO: ===========LOADING INPUT DATA===========
+2026-10-02 17:43:25.257 INFO: Using heads: ['Default']
+2026-10-02 17:43:25.257 INFO: Using the key specifications to parse data:
+2026-10-02 17:43:25.257 INFO: Default: KeySpecification(info_keys={'energy': 'energy', 'stress': 'REF_stress', 'virials': 'REF_virials', 'dipole': 'dipole', 'head': 'head', 'elec_temp': 'elec_temp', 'total_charge': 'total_charge', 'polarizability': 'polarizability', 'total_spin': 'total_spin'}, arrays_keys={'forces': 'forces', 'charges': 'REF_charges'})
+2026-10-02 17:43:25.257 INFO: =============    Processing head Default     ===========
+2026-10-02 17:43:25.337 WARNING: Since ASE version 3.23.0b1, using energy_key 'energy' is no longer safe when communicating between MACE and ASE. We recommend using a different key, rewriting 'energy' to 'REF_energy'. You need to use --energy_key='REF_energy' to specify the chosen key name.
+2026-10-02 17:43:25.351 WARNING: Since ASE version 3.23.0b1, using forces_key 'forces' is no longer safe when communicating between MACE and ASE. We recommend using a different key, rewriting 'forces' to 'REF_forces'. You need to use --forces_key='REF_forces' to specify the chosen key name.
+2026-10-02 17:43:25.371 INFO: Training set 1/1 [energy: 234, stress: 0, virials: 0, dipole components: 0, head: 234, elec_temp: 0, total_charge: 0, polarizability: 0, total_spin: 0, forces: 234, charges: 0]
+2026-10-02 17:43:25.372 INFO: Total Training set [energy: 234, stress: 0, virials: 0, dipole components: 0, head: 234, elec_temp: 0, total_charge: 0, polarizability: 0, total_spin: 0, forces: 234, charges: 0]
+2026-10-02 17:43:25.393 WARNING: Since ASE version 3.23.0b1, using energy_key 'energy' is no longer safe when communicating between MACE and ASE. We recommend using a different key, rewriting 'energy' to 'REF_energy'. You need to use --energy_key='REF_energy' to specify the chosen key name.
+2026-10-02 17:43:25.396 WARNING: Since ASE version 3.23.0b1, using forces_key 'forces' is no longer safe when communicating between MACE and ASE. We recommend using a different key, rewriting 'forces' to 'REF_forces'. You need to use --forces_key='REF_forces' to specify the chosen key name.
+2026-10-02 17:43:25.399 INFO: Validation set 1/1 [energy: 42, stress: 0, virials: 0, dipole components: 0, head: 42, elec_temp: 0, total_charge: 0, polarizability: 0, total_spin: 0, forces: 42, charges: 0]
+2026-10-02 17:43:25.400 INFO: Total Validation set [energy: 42, stress: 0, virials: 0, dipole components: 0, head: 42, elec_temp: 0, total_charge: 0, polarizability: 0, total_spin: 0, forces: 42, charges: 0]
+2026-10-02 17:43:25.400 INFO: Total number of configurations: train=234, valid=42, tests=[],
+2026-10-02 17:43:25.400 INFO: Using atomic numbers from command line argument
+2026-10-02 17:43:25.400 INFO: Atomic Numbers used: [1, 6, 7, 27, 28, 46]
+2026-10-02 17:43:25.400 INFO: Isolated Atomic Energies (E0s) not in training file, using command line argument
+2026-10-02 17:43:25.400 INFO: Computing average Atomic Energies using least squares regression
+2026-10-02 17:43:25.402 INFO: Atomic Energies used (z: eV) for head Default: {1: -7.177663499421661, 6: -8.893706952122827, 7: -8.354456466309644, 27: -0.1119940690561838, 28: 1.5223159561643005, 46: -1.7623252221781633}
+2026-10-02 17:43:25.402 INFO: Processing datasets for head 'Default'
+2026-10-02 17:43:25.535 INFO: Combining 1 list datasets for head 'Default'
+2026-10-02 17:43:25.560 INFO: Combining 1 list datasets for head 'Default_valid'
+2026-10-02 17:43:25.560 INFO: Combined validation datasets for Default
+2026-10-02 17:43:25.560 INFO: Head 'Default' training dataset size: 234
+2026-10-02 17:43:25.561 INFO: Computing average number of neighbors
+/home/ziat1/miniconda3/envs/sac_multitm_env/lib/python3.10/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+2026-10-02 17:43:25.646 INFO: Average number of neighbors: 29.718605041503906
+2026-10-02 17:43:25.646 INFO: During training the following quantities will be reported: energy, forces
+2026-10-02 17:43:25.646 INFO: ===========MODEL DETAILS===========
+2026-10-02 17:43:25.726 INFO: Building model
+2026-10-02 17:43:25.726 INFO: Message passing with 64 channels and max_L=1 (64x0e + 64x1o)
+2026-10-02 17:43:25.726 INFO: 2 layers, each with correlation order: 3 (body order: 4) and spherical harmonics up to: l=3
+2026-10-02 17:43:25.726 INFO: 8 radial and 5 basis functions
+2026-10-02 17:43:25.726 INFO: Radial cutoff: 5.0 A (total receptive field for each atom: 10.0 A)
+2026-10-02 17:43:25.726 INFO: Distance transform for radial basis functions: None
+2026-10-02 17:43:25.726 INFO: Hidden irreps: 64x0e + 64x1o
+/home/ziat1/miniconda3/envs/sac_multitm_env/lib/python3.10/site-packages/torch/jit/_script.py:1491: FutureWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.
+  warnings.warn(
+/home/ziat1/miniconda3/envs/sac_multitm_env/lib/python3.10/ast.py:418: UserWarning: The TorchScript type system doesn't support instance-level annotations on empty non-base types in `__init__`. Instead, either 1) use a type annotation in the class body, or 2) wrap the type in `torch.jit.Attribute`.
+  return visitor(node)
+/home/ziat1/miniconda3/envs/sac_multitm_env/lib/python3.10/site-packages/torch/jit/_script.py:1491: FutureWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.
+  warnings.warn(
+/home/ziat1/miniconda3/envs/sac_multitm_env/lib/python3.10/ast.py:418: UserWarning: The TorchScript type system doesn't support instance-level annotations on empty non-base types in `__init__`. Instead, either 1) use a type annotation in the class body, or 2) wrap the type in `torch.jit.Attribute`.
+  return visitor(node)
+/home/ziat1/miniconda3/envs/sac_multitm_env/lib/python3.10/site-packages/torch/jit/_script.py:1491: FutureWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.
+  warnings.warn(
+/home/ziat1/miniconda3/envs/sac_multitm_env/lib/python3.10/ast.py:418: UserWarning: The TorchScript type system doesn't support instance-level annotations on empty non-base types in `__init__`. Instead, either 1) use a type annotation in the class body, or 2) wrap the type in `torch.jit.Attribute`.
+  return visitor(node)
+/home/ziat1/miniconda3/envs/sac_multitm_env/lib/python3.10/site-packages/torch/jit/_script.py:1491: FutureWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.
+  warnings.warn(
+/home/ziat1/miniconda3/envs/sac_multitm_env/lib/python3.10/ast.py:418: UserWarning: The TorchScript type system doesn't support instance-level annotations on empty non-base types in `__init__`. Instead, either 1) use a type annotation in the class body, or 2) wrap the type in `torch.jit.Attribute`.
+  return visitor(node)
+/home/ziat1/miniconda3/envs/sac_multitm_env/lib/python3.10/site-packages/torch/jit/_script.py:1491: FutureWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.
+  warnings.warn(
+/home/ziat1/miniconda3/envs/sac_multitm_env/lib/python3.10/ast.py:418: UserWarning: The TorchScript type system doesn't support instance-level annotations on empty non-base types in `__init__`. Instead, either 1) use a type annotation in the class body, or 2) wrap the type in `torch.jit.Attribute`.
+  return visitor(node)
+/home/ziat1/miniconda3/envs/sac_multitm_env/lib/python3.10/site-packages/torch/jit/_script.py:1491: FutureWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.
+  warnings.warn(
+/home/ziat1/miniconda3/envs/sac_multitm_env/lib/python3.10/ast.py:418: UserWarning: The TorchScript type system doesn't support instance-level annotations on empty non-base types in `__init__`. Instead, either 1) use a type annotation in the class body, or 2) wrap the type in `torch.jit.Attribute`.
+  return visitor(node)
+/home/ziat1/miniconda3/envs/sac_multitm_env/lib/python3.10/site-packages/torch/jit/_script.py:1491: FutureWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.
+  warnings.warn(
+/home/ziat1/miniconda3/envs/sac_multitm_env/lib/python3.10/ast.py:418: UserWarning: The TorchScript type system doesn't support instance-level annotations on empty non-base types in `__init__`. Instead, either 1) use a type annotation in the class body, or 2) wrap the type in `torch.jit.Attribute`.
+  return visitor(node)
+/home/ziat1/miniconda3/envs/sac_multitm_env/lib/python3.10/site-packages/torch/jit/_script.py:1491: FutureWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.
+  warnings.warn(
+/home/ziat1/miniconda3/envs/sac_multitm_env/lib/python3.10/ast.py:418: UserWarning: The TorchScript type system doesn't support instance-level annotations on empty non-base types in `__init__`. Instead, either 1) use a type annotation in the class body, or 2) wrap the type in `torch.jit.Attribute`.
+  return visitor(node)
+/home/ziat1/miniconda3/envs/sac_multitm_env/lib/python3.10/site-packages/torch/jit/_script.py:1491: FutureWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.
+  warnings.warn(
+/home/ziat1/miniconda3/envs/sac_multitm_env/lib/python3.10/ast.py:418: UserWarning: The TorchScript type system doesn't support instance-level annotations on empty non-base types in `__init__`. Instead, either 1) use a type annotation in the class body, or 2) wrap the type in `torch.jit.Attribute`.
+  return visitor(node)
+/home/ziat1/miniconda3/envs/sac_multitm_env/lib/python3.10/site-packages/torch/jit/_script.py:1491: FutureWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.
+  warnings.warn(
+/home/ziat1/miniconda3/envs/sac_multitm_env/lib/python3.10/ast.py:418: UserWarning: The TorchScript type system doesn't support instance-level annotations on empty non-base types in `__init__`. Instead, either 1) use a type annotation in the class body, or 2) wrap the type in `torch.jit.Attribute`.
+  return visitor(node)
+/home/ziat1/miniconda3/envs/sac_multitm_env/lib/python3.10/site-packages/torch/jit/_script.py:1491: FutureWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.
+  warnings.warn(
+/home/ziat1/miniconda3/envs/sac_multitm_env/lib/python3.10/ast.py:418: UserWarning: The TorchScript type system doesn't support instance-level annotations on empty non-base types in `__init__`. Instead, either 1) use a type annotation in the class body, or 2) wrap the type in `torch.jit.Attribute`.
+  return visitor(node)
+/home/ziat1/miniconda3/envs/sac_multitm_env/lib/python3.10/site-packages/torch/jit/_script.py:1491: FutureWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.
+  warnings.warn(
+/home/ziat1/miniconda3/envs/sac_multitm_env/lib/python3.10/ast.py:418: UserWarning: The TorchScript type system doesn't support instance-level annotations on empty non-base types in `__init__`. Instead, either 1) use a type annotation in the class body, or 2) wrap the type in `torch.jit.Attribute`.
+  return visitor(node)
+/home/ziat1/miniconda3/envs/sac_multitm_env/lib/python3.10/site-packages/torch/jit/_script.py:1491: FutureWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.
+  warnings.warn(
+/home/ziat1/miniconda3/envs/sac_multitm_env/lib/python3.10/ast.py:418: UserWarning: The TorchScript type system doesn't support instance-level annotations on empty non-base types in `__init__`. Instead, either 1) use a type annotation in the class body, or 2) wrap the type in `torch.jit.Attribute`.
+  return visitor(node)
+/home/ziat1/miniconda3/envs/sac_multitm_env/lib/python3.10/site-packages/torch/jit/_script.py:1491: FutureWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.
+  warnings.warn(
+/home/ziat1/miniconda3/envs/sac_multitm_env/lib/python3.10/ast.py:418: UserWarning: The TorchScript type system doesn't support instance-level annotations on empty non-base types in `__init__`. Instead, either 1) use a type annotation in the class body, or 2) wrap the type in `torch.jit.Attribute`.
+  return visitor(node)
+2026-10-02 17:43:26.616 INFO: ===========OPTIMIZER INFORMATION===========
+2026-10-02 17:43:26.616 INFO: Using ADAM as parameter optimizer
+2026-10-02 17:43:26.616 INFO: Batch size: 4
+2026-10-02 17:43:26.616 INFO: Using Exponential Moving Average with decay: 0.99
+2026-10-02 17:43:26.616 INFO: Number of gradient updates: 3510
+2026-10-02 17:43:26.616 INFO: Learning rate: 0.01, weight decay: 5e-07
+2026-10-02 17:43:26.616 INFO: WeightedEnergyForcesLoss(energy_weight=1.000, forces_weight=10.000)
+2026-10-02 17:43:26.617 INFO: === Layer's learning rates ===
+2026-10-02 17:43:26.617 INFO: Param group 0: lr = 0.01
+2026-10-02 17:43:26.617 INFO: Param group 1: lr = 0.01
+2026-10-02 17:43:26.617 INFO: Param group 2: lr = 0.01
+2026-10-02 17:43:26.617 INFO: Param group 3: lr = 0.01
+2026-10-02 17:43:26.617 INFO: Param group 4: lr = 0.01
+2026-10-02 17:43:26.617 INFO: Using gradient clipping with tolerance=10.000
+2026-10-02 17:43:26.618 INFO: 
+2026-10-02 17:43:26.618 INFO: ===========TRAINING===========
+2026-10-02 17:43:26.618 INFO: Started training, reporting errors on validation set
+2026-10-02 17:43:26.618 INFO: Loss metrics on validation set
+/home/ziat1/miniconda3/envs/sac_multitm_env/lib/python3.10/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+2026-10-02 17:43:30.354 INFO: Initial: head: Default, loss=7.30200720, RMSE_E_per_atom=  610.27 meV, RMSE_F= 1696.02 meV / A
+2026-10-02 17:44:33.012 INFO: Epoch 0: head: Default, loss=0.49206749, RMSE_E_per_atom=   61.70 meV, RMSE_F=  436.48 meV / A
+2026-10-02 17:45:36.112 INFO: Epoch 1: head: Default, loss=0.16182661, RMSE_E_per_atom=   31.63 meV, RMSE_F=  250.49 meV / A
+2026-10-02 17:46:41.562 INFO: Epoch 2: head: Default, loss=0.12061033, RMSE_E_per_atom=   22.72 meV, RMSE_F=  216.26 meV / A
+2026-10-02 17:47:44.750 INFO: Epoch 3: head: Default, loss=0.08435847, RMSE_E_per_atom=   19.00 meV, RMSE_F=  180.84 meV / A
+2026-10-02 17:48:49.759 INFO: Epoch 4: head: Default, loss=0.06389676, RMSE_E_per_atom=   15.75 meV, RMSE_F=  157.80 meV / A
+2026-10-02 17:49:57.556 INFO: Epoch 5: head: Default, loss=0.05242128, RMSE_E_per_atom=   12.10 meV, RMSE_F=  143.19 meV / A
+2026-10-02 17:51:04.571 INFO: Epoch 6: head: Default, loss=0.04526892, RMSE_E_per_atom=   11.47 meV, RMSE_F=  133.20 meV / A
+2026-10-02 17:52:10.750 INFO: Epoch 7: head: Default, loss=0.04050876, RMSE_E_per_atom=   12.23 meV, RMSE_F=  126.11 meV / A
+2026-10-02 17:53:16.302 INFO: Epoch 8: head: Default, loss=0.03617997, RMSE_E_per_atom=   11.76 meV, RMSE_F=  119.19 meV / A
+2026-10-02 17:54:36.176 INFO: Epoch 9: head: Default, loss=0.03313599, RMSE_E_per_atom=   10.11 meV, RMSE_F=  114.12 meV / A
+2026-10-02 17:55:51.929 INFO: Epoch 10: head: Default, loss=0.03089891, RMSE_E_per_atom=    8.33 meV, RMSE_F=  110.26 meV / A
+2026-10-02 17:56:58.593 INFO: Epoch 11: head: Default, loss=0.02894943, RMSE_E_per_atom=    8.63 meV, RMSE_F=  106.78 meV / A
+2026-10-02 17:58:03.021 INFO: Epoch 12: head: Default, loss=0.02717067, RMSE_E_per_atom=    8.64 meV, RMSE_F=  103.47 meV / A
+2026-10-02 17:59:14.168 INFO: Epoch 13: head: Default, loss=0.02514305, RMSE_E_per_atom=    7.27 meV, RMSE_F=   99.59 meV / A
+2026-10-02 18:00:23.383 INFO: Epoch 14: head: Default, loss=0.02336027, RMSE_E_per_atom=    5.54 meV, RMSE_F=   96.03 meV / A
+2026-10-02 18:01:29.774 INFO: Epoch 15: head: Default, loss=0.02194460, RMSE_E_per_atom=    5.38 meV, RMSE_F=   93.09 meV / A
+2026-10-02 18:02:39.695 INFO: Epoch 16: head: Default, loss=0.02065056, RMSE_E_per_atom=    5.18 meV, RMSE_F=   90.32 meV / A
+2026-10-02 18:03:49.031 INFO: Epoch 17: head: Default, loss=0.01979121, RMSE_E_per_atom=    5.43 meV, RMSE_F=   88.45 meV / A
+2026-10-02 18:04:56.520 INFO: Epoch 18: head: Default, loss=0.02004467, RMSE_E_per_atom=    5.22 meV, RMSE_F=   89.04 meV / A
+2026-10-02 18:06:03.049 INFO: Epoch 19: head: Default, loss=0.01839894, RMSE_E_per_atom=    4.91 meV, RMSE_F=   85.31 meV / A
+2026-10-02 18:07:07.134 INFO: Epoch 20: head: Default, loss=0.01753056, RMSE_E_per_atom=    6.84 meV, RMSE_F=   83.26 meV / A
+2026-10-02 18:08:20.885 INFO: Epoch 21: head: Default, loss=0.01692151, RMSE_E_per_atom=    7.56 meV, RMSE_F=   81.83 meV / A
+2026-10-02 18:09:38.705 INFO: Epoch 22: head: Default, loss=0.01591983, RMSE_E_per_atom=    6.95 meV, RMSE_F=   79.38 meV / A
+2026-10-02 18:10:56.099 INFO: Epoch 23: head: Default, loss=0.01505963, RMSE_E_per_atom=    6.56 meV, RMSE_F=   77.22 meV / A
+2026-10-02 18:12:14.989 INFO: Epoch 24: head: Default, loss=0.01441746, RMSE_E_per_atom=    5.89 meV, RMSE_F=   75.58 meV / A
+2026-10-02 18:13:32.783 INFO: Epoch 25: head: Default, loss=0.01367635, RMSE_E_per_atom=    5.90 meV, RMSE_F=   73.61 meV / A
+2026-10-02 18:14:51.627 INFO: Epoch 26: head: Default, loss=0.01312674, RMSE_E_per_atom=    5.92 meV, RMSE_F=   72.11 meV / A
+2026-10-02 18:16:10.271 INFO: Epoch 27: head: Default, loss=0.01315535, RMSE_E_per_atom=    6.67 meV, RMSE_F=   72.19 meV / A
+2026-10-02 18:17:28.923 INFO: Epoch 28: head: Default, loss=0.01252103, RMSE_E_per_atom=    5.67 meV, RMSE_F=   70.43 meV / A
+2026-10-02 18:18:46.826 INFO: Epoch 29: head: Default, loss=0.01199099, RMSE_E_per_atom=    6.56 meV, RMSE_F=   68.94 meV / A
+2026-10-02 18:20:05.744 INFO: Epoch 30: head: Default, loss=0.01164352, RMSE_E_per_atom=    6.67 meV, RMSE_F=   67.94 meV / A
+2026-10-02 18:21:23.480 INFO: Epoch 31: head: Default, loss=0.01103830, RMSE_E_per_atom=    6.35 meV, RMSE_F=   66.16 meV / A
+2026-10-02 18:22:41.878 INFO: Epoch 32: head: Default, loss=0.01094995, RMSE_E_per_atom=    7.03 meV, RMSE_F=   65.89 meV / A
+2026-10-02 18:23:59.838 INFO: Epoch 33: head: Default, loss=0.01056032, RMSE_E_per_atom=    7.33 meV, RMSE_F=   64.71 meV / A
+2026-10-02 18:25:17.518 INFO: Epoch 34: head: Default, loss=0.01087180, RMSE_E_per_atom=    7.51 meV, RMSE_F=   65.65 meV / A
+2026-10-02 18:26:37.074 INFO: Epoch 35: head: Default, loss=0.01057431, RMSE_E_per_atom=    7.59 meV, RMSE_F=   64.75 meV / A
+2026-10-02 18:27:55.802 INFO: Epoch 36: head: Default, loss=0.01010132, RMSE_E_per_atom=    6.78 meV, RMSE_F=   63.29 meV / A
+2026-10-02 18:29:13.867 INFO: Epoch 37: head: Default, loss=0.00984276, RMSE_E_per_atom=    6.42 meV, RMSE_F=   62.48 meV / A
+2026-10-02 18:30:30.256 INFO: Epoch 38: head: Default, loss=0.00952636, RMSE_E_per_atom=    6.19 meV, RMSE_F=   61.48 meV / A
+2026-10-02 18:31:45.858 INFO: Epoch 39: head: Default, loss=0.00925405, RMSE_E_per_atom=    6.08 meV, RMSE_F=   60.59 meV / A
+2026-10-02 18:33:01.493 INFO: Epoch 40: head: Default, loss=0.00910584, RMSE_E_per_atom=    6.17 meV, RMSE_F=   60.10 meV / A
+2026-10-02 18:34:16.097 INFO: Epoch 41: head: Default, loss=0.00872351, RMSE_E_per_atom=    5.79 meV, RMSE_F=   58.83 meV / A
+2026-10-02 18:35:30.331 INFO: Epoch 42: head: Default, loss=0.00855047, RMSE_E_per_atom=    5.68 meV, RMSE_F=   58.24 meV / A
+2026-10-02 18:36:44.169 INFO: Epoch 43: head: Default, loss=0.00836405, RMSE_E_per_atom=    5.07 meV, RMSE_F=   57.60 meV / A
+2026-10-02 18:37:57.059 INFO: Epoch 44: head: Default, loss=0.00818586, RMSE_E_per_atom=    4.82 meV, RMSE_F=   56.98 meV / A
+2026-10-02 18:39:11.350 INFO: Epoch 45: head: Default, loss=0.00802012, RMSE_E_per_atom=    4.31 meV, RMSE_F=   56.43 meV / A
+2026-10-02 18:40:24.987 INFO: Epoch 46: head: Default, loss=0.00805037, RMSE_E_per_atom=    4.69 meV, RMSE_F=   56.53 meV / A
+2026-10-02 18:41:38.468 INFO: Epoch 47: head: Default, loss=0.00792193, RMSE_E_per_atom=    4.77 meV, RMSE_F=   56.08 meV / A
+2026-10-02 18:42:52.358 INFO: Epoch 48: head: Default, loss=0.00765438, RMSE_E_per_atom=    4.90 meV, RMSE_F=   55.12 meV / A
+2026-10-02 18:44:06.067 INFO: Epoch 49: head: Default, loss=0.00761438, RMSE_E_per_atom=    4.91 meV, RMSE_F=   54.98 meV / A
+2026-10-02 18:45:19.670 INFO: Epoch 50: head: Default, loss=0.00756213, RMSE_E_per_atom=    4.83 meV, RMSE_F=   54.79 meV / A
+2026-10-02 18:46:32.799 INFO: Epoch 51: head: Default, loss=0.00739440, RMSE_E_per_atom=    4.81 meV, RMSE_F=   54.18 meV / A
+2026-10-02 18:47:46.125 INFO: Epoch 52: head: Default, loss=0.00731412, RMSE_E_per_atom=    4.86 meV, RMSE_F=   53.88 meV / A
+2026-10-02 18:48:56.829 INFO: Epoch 53: head: Default, loss=0.00715369, RMSE_E_per_atom=    4.99 meV, RMSE_F=   53.28 meV / A
+2026-10-02 18:50:03.466 INFO: Epoch 54: head: Default, loss=0.00710412, RMSE_E_per_atom=    5.06 meV, RMSE_F=   53.10 meV / A
+2026-10-02 18:51:08.802 INFO: Epoch 55: head: Default, loss=0.00720888, RMSE_E_per_atom=    5.51 meV, RMSE_F=   53.49 meV / A
+2026-10-02 18:52:15.017 INFO: Epoch 56: head: Default, loss=0.00738816, RMSE_E_per_atom=    7.32 meV, RMSE_F=   54.12 meV / A
+2026-10-02 18:53:20.670 INFO: Epoch 57: head: Default, loss=0.00727648, RMSE_E_per_atom=    6.99 meV, RMSE_F=   53.72 meV / A
+2026-10-02 18:54:26.100 INFO: Epoch 58: head: Default, loss=0.00712005, RMSE_E_per_atom=    6.32 meV, RMSE_F=   53.15 meV / A
+2026-10-02 18:55:31.651 INFO: Epoch 59: head: Default, loss=0.00717301, RMSE_E_per_atom=    5.81 meV, RMSE_F=   53.36 meV / A
+2026-10-02 18:55:31.652 INFO: Training complete
+2026-10-02 18:55:31.653 INFO: 
+2026-10-02 18:55:31.654 INFO: ===========RESULTS===========
+2026-10-02 18:55:31.668 INFO: Loading checkpoint: ./checkpoints/mace_multitm_model_run-123_epoch-59.pt
+/home/ziat1/miniconda3/envs/sac_multitm_env/lib/python3.10/site-packages/mace/tools/checkpoint.py:187: UserWarning: Environment variable TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD detected, since the`weights_only` argument was not explicitly passed to `torch.load`, forcing weights_only=False.
+  torch.load(f=checkpoint_info.path, map_location=device),
+2026-10-02 18:55:31.737 INFO: Loaded Stage one model from epoch 59 for evaluation
+2026-10-02 18:55:31.738 INFO: Saving model to checkpoints/mace_multitm_model_run-123.model
+/home/ziat1/miniconda3/envs/sac_multitm_env/lib/python3.10/site-packages/torch/jit/_serialization.py:89: FutureWarning: `torch.jit.save` is deprecated. Please switch to `torch.export`.
+  warnings.warn(
+/home/ziat1/miniconda3/envs/sac_multitm_env/lib/python3.10/site-packages/torch/jit/_serialization.py:176: FutureWarning: `torch.jit.load` is deprecated. Please switch to `torch.export`.
+  warnings.warn(
+2026-10-02 18:55:32.010 INFO: Compiling model, saving metadata to mace_multitm_model_compiled.model
+/home/ziat1/miniconda3/envs/sac_multitm_env/lib/python3.10/site-packages/torch/jit/_trace.py:1145: FutureWarning: `torch.jit.trace_method` is deprecated. Please switch to `torch.compile` or `torch.export`.
+  warnings.warn(
+2026-10-02 18:55:33.040 INFO: Computing metrics for training, validation, and test sets
+2026-10-02 18:55:33.040 INFO: Skipping evaluation for heads: ['pt_head']
+2026-10-02 18:55:33.048 INFO: Evaluating train_Default ...
+2026-10-02 18:55:51.657 INFO: Evaluating valid_Default ...
+2026-10-02 18:55:55.320 INFO: Error-table on TRAIN and VALID:
++---------------+---------------------+------------------+-------------------+
+|  config_type  | RMSE E / meV / atom | RMSE F / meV / A | relative F RMSE % |
++---------------+---------------------+------------------+-------------------+
+| train_Default |           14.6      |         42.6     |          2.38     |
+| valid_Default |            5.7      |         50.5     |          2.99     |
++---------------+---------------------+------------------+-------------------+
+2026-10-02 18:56:22.890 INFO: Done
