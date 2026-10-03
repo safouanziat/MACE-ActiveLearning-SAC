@@ -11,7 +11,7 @@ def sync_catalysis_to_mongo():
         return
         
     print(f"Connexion à MongoDB Atlas... ({len(rows)} structures trouvées)")
-    uri = "mongodb+srv://safouanziat_db_user:PnxN5NCgk7NAfK5b@sacpipelinecluster.3xffyti.mongodb.net/?retryWrites=true&w=majority"
+    uri = "live MongoDB Atlas connection string with a plaintext username and password"
     client = MongoClient(uri)
     
     # Collection dédiée aux structures quantiques DFT brutes
