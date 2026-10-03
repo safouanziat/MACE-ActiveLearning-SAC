@@ -9,7 +9,7 @@ def sync_and_explore():
     
     docs_to_sync = list(local_store.query())
     
-    uri = "mongodb+srv://safouanziat_db_user:PnxN5NCgk7NAfK5b@sacpipelinecluster.3xffyti.mongodb.net/?retryWrites=true&w=majority"
+    uri = "live MongoDB Atlas connection string with a plaintext username and password"
     client = MongoClient(uri)
     db = client["sac_multitm_db"]
     collection = db["outputs"]
