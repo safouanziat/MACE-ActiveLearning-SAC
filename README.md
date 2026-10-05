@@ -12,8 +12,9 @@ H₂ dissociation on nitrogen-doped graphene-supported palladium (Pd–C<sub>3�
 ![Jobflow](https://img.shields.io/badge/orchestration-jobflow-28a745)
 ![MongoDB](https://img.shields.io/badge/storage-MongoDB%20Atlas-47A248?logo=mongodb&logoColor=white)
 [![Paper](https://img.shields.io/badge/paper-J.%20Phys.%20Chem.%20Lett.%202026-orange)](https://doi.org/10.1021/acs.jpclett.5c03805)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
-[Overview](#-overview) · [Pipeline](#-pipeline-architecture) · [Results](#-key-results) · [Quick start](#-quick-start) · [Structure](#-repository-structure) · [Publication](#-related-publication--citation)
+[Overview](#-overview) · [Pipeline](#-pipeline-architecture) · [Results](#-key-results) · [Quick start](#-quick-start) · [Structure](#-repository-structure) · [Publication](#-related-publication--citation) · [License](#-license)
 
 </div>
 
@@ -242,6 +243,12 @@ and, if relevant, the repository itself:
   year   = {2026}
 }
 ```
+
+---
+
+## 📄 License
+
+Released under the [MIT License](LICENSE). Copyright © 2026 Safouan Ziat.
 
 ---
 
